@@ -3,13 +3,19 @@ import ListingCard from './ListingCard'
 
 
 
-function ListingsContainer() {
-
+function ListingsContainer({ listings, onRemoveListing }) {
 
 
   return (
     <main>
       <ul className="cards">
+        {listings.map((listing) => (
+          <ListingCard
+            key={listing.id}
+            listing={listing}
+            onRemoveListing={onRemoveListing}
+          />
+        ))}
       </ul>
     </main>
   );

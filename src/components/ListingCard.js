@@ -17,10 +17,21 @@ function ListingCard({ listing: { id, image, description, location }, onRemoveLi
         <img src={image} alt={description} />
       </div>
       <div className="details">
-        {true ? (
-          <button className="emoji-button favorite active">★</button>
+        {favorite ? (
+          <button
+            onClick={() => setFavorite(false)}
+            className="emoji-button favorite active"
+          >
+            ★
+          </button>
         ) : (
-          <button className="emoji-button favorite">☆</button>
+
+          <button
+            onClick={() => setFavorite(true)}
+            className="emoji-button favorite"
+          >
+            ☆
+          </button>
         )}
         <strong>{description}</strong>
         <span> · {location}</span>
