@@ -12,7 +12,6 @@ function App() {
       .then((r) => r.json())
       .then(setListings);
   }, []);
-  console.log(listings)
 
   const displayedListings = listings.filter((listing) => listing.description.toLowerCase().includes(search.toLowerCase())
   );

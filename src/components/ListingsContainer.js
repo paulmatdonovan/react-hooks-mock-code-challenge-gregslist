@@ -2,9 +2,7 @@ import React from "react";
 import ListingCard from './ListingCard'
 
 
-
 function ListingsContainer({ listings, onRemoveListing }) {
-
 
   return (
     <main>
